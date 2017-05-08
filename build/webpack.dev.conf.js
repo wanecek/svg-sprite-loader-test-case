@@ -31,7 +31,6 @@ module.exports = merge(baseWebpackConfig, {
       template: 'index.ejs',
       inject: true
     }),
-    new SpriteLoaderPlugin(),
     new FriendlyErrorsPlugin()
   ]
 })
