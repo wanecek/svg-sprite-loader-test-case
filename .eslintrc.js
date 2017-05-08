@@ -11,7 +11,6 @@ module.exports = {
     es6: true,
     node: true,
   },
-  // required to lint *.vue files
   plugins: [
     'html'
   ],

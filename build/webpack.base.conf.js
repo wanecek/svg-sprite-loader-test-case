@@ -2,7 +2,6 @@ var path = require('path')
 
 var utils = require('./utils')
 var config = require('../config')
-var vueLoaderConfig = require('./vue-loader.conf')
 var SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 
 function resolve (dir) {
@@ -21,27 +20,21 @@ module.exports = {
       : config.dev.assetsPublicPath
   },
   resolve: {
-    extensions: ['.js', '.vue', '.json'],
+    extensions: ['.js', '.json'],
     alias: {
-      'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src')
     }
   },
   module: {
     rules: [
       {
-        test: /\.(js|vue)$/,
+        test: /\.js$/,
         loader: 'eslint-loader',
         enforce: 'pre',
         include: [resolve('src'), resolve('test')],
         options: {
           formatter: require('eslint-friendly-formatter')
         }
-      },
-      {
-        test: /\.vue$/,
-        loader: 'vue-loader',
-        options: vueLoaderConfig
       },
       {
         test: /\.js$/,
