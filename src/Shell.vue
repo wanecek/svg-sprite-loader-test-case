@@ -1,15 +1,17 @@
 <template>
   <div class="shell">
-    <svg :viewBox="viewBox">
-      <use :xlink:href="symbolId"></use>
-    </svg>
+    <ul>
+      <li><b>symbolId</b>: {{ symbolId }}</li>
+      <li><b>viewBox</b>: {{ viewBox }}</li>
+      <li><b>content</b>: {{ content }}</li>
+    </ul>
   </div>
 </template>
 
 <script>
 import Arrow from './assets/arrow.svg';
 
-console.log(Arrow);
+console.log(Arrow); // Should log SpriteSymbol<id: string, viewBox: string, content: string>
 
 export default {
   name: 'shell',
@@ -17,7 +19,8 @@ export default {
   data() {
     return {
       viewBox: Arrow.viewBox,
-      symbolId: Arrow.symbolId,
+      symbolId: Arrow.id,
+      content: Arrow.content,
     };
   },
 };
