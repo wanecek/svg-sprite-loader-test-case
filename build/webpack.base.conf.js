@@ -47,9 +47,8 @@ module.exports = {
           {
             loader: 'svg-sprite-loader',
             options: {
-              // symbolId: '[name].[hash]',
-              // spriteFilename: 'icons.[chunkname].svg',
-              extract: true
+              extract: true,
+              runtimeGenerator: require.resolve('./svg-runtime-generator.js'),
             }
           },
           'svgo-loader',
