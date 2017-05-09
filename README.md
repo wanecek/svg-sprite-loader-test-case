@@ -1,4 +1,4 @@
-#To Reproduce:
+# To Reproduce:
 
 1. Download the test-case and install dependencies (`npm i` or `yarn`).
 2. Start up the project with npm start. This should launch your web-browser at http://localhost:3000.
